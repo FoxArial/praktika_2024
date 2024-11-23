@@ -7,6 +7,9 @@ import WelcomeScreen from '../screens/WelcomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import HomeScreen from '../screens/HomeScreen';
+import SearchScreen from '../screens/SearchScreen';
+import ProfileScreen from '../screens/ProfileScreen';
+
 const db = getDatabase();
 const Stack = createStackNavigator();
 export default function AppNavigation() {
@@ -17,6 +20,8 @@ export default function AppNavigation() {
     <Stack.Screen name="Login" options={{headerShown: false}} component={LoginScreen}/>
     <Stack.Screen name="Register" options={{headerShown: false}} component={RegisterScreen}/>
     <Stack.Screen name="Home" options={{headerShown: false}} component={HomeScreen}/>
+    <Stack.Screen name="Search" options={{headerShown:false}} component={SearchScreen}/>
+    <Stack.Screen name="Profile" options={{headerShown:false}} component={ProfileScreen}/>
     </Stack.Navigator>
   </NavigationContainer>
 

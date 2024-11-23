@@ -24,6 +24,8 @@ export default function HomeScreen({navigation}){
       <View style={styles.content}>
         <Text>Основний вміст сторінки.</Text>
         <Text>Він автоматично піднімається, якщо поле закрито.</Text>
+        <Text onPress = {() =>(navigation.navigate('Search'))}>Tap here to meow</Text>
+
       </View>
     </View>
   );
