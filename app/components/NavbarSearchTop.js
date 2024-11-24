@@ -1,8 +1,9 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, TouchableOpacity, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/Feather"; // Для іконок
 
-const Navbar = ({ onMenuPress, onSearchPress, onProfilePress }) => {
+const Navbar = ({ onMenuPress, onFilterPress, onProfilePress }) => {
+
   return (
     <View style={styles.navbar}>
       {/* Ліва частина: Меню */}
@@ -10,10 +11,10 @@ const Navbar = ({ onMenuPress, onSearchPress, onProfilePress }) => {
         <Icon name="menu" size={28} color="#fff" />
       </TouchableOpacity>
 
-      {/* Права частина: Пошук і Профіль */}
+      {/* Права частина: Фільтр і Профіль */}
       <View style={styles.rightIcons}>
-        <TouchableOpacity onPress={onSearchPress} style={styles.iconButton}>
-          <Icon name="search" size={24} color="#fff" />
+        <TouchableOpacity onPress={onFilterPress} style={styles.iconButton}>
+          <Icon name="filter" size={24} color="#fff" />
         </TouchableOpacity>
         <TouchableOpacity onPress={onProfilePress} style={styles.iconButton}>
           <Icon name="user" size={24} color="#fff" />

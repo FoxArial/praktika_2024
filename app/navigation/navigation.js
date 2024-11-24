@@ -9,6 +9,9 @@ import RegisterScreen from '../screens/RegisterScreen';
 import HomeScreen from '../screens/HomeScreen';
 import SearchScreen from '../screens/SearchScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import CreateOfflineGame from '../screens/CreateOfflineGame';
+import CreateOnlineGame from '../screens/CreateOnlineGame';
+import { ScreenStack } from 'react-native-screens';
 
 const db = getDatabase();
 const Stack = createStackNavigator();
@@ -22,6 +25,8 @@ export default function AppNavigation() {
     <Stack.Screen name="Home" options={{headerShown: false}} component={HomeScreen}/>
     <Stack.Screen name="Search" options={{headerShown:false}} component={SearchScreen}/>
     <Stack.Screen name="Profile" options={{headerShown:false}} component={ProfileScreen}/>
+    <Stack.Screen name="CreateOnlineGame" options={{headerShown:false}} component={CreateOnlineGame}/>
+    <Stack.Screen name="CreateOfflineGame" options={{headerShown:false}} component={CreateOfflineGame}/>
     </Stack.Navigator>
   </NavigationContainer>
 

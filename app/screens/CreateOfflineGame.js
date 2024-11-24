@@ -2,12 +2,12 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-function ProfileScreen({navigation}) {
+function CreateOfflineGame({navigation}) {
     return (
-        <SafeAreaView> <Text> Profile000</Text>
+        <SafeAreaView> <Text> CreateOfflineGame</Text>
         <Text onPress={()=> navigation.navigate("Search")}> Go back</Text>
         </SafeAreaView>
     );
 }
 
-export default ProfileScreen;
+export default CreateOfflineGame;
