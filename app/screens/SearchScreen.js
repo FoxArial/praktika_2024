@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, FlatList, TextInput, TouchableOpacity, Modal,} from "react-native";
 import { MaterialIcons, FontAwesome } from "@expo/vector-icons";
-import Navbar from "../components/NavbarSearchTop";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Card from "../components/Card";
 
+
+import Navbar from "../components/NavbarSearchTop";
+import CardOnline from "../components/CardOnline";
+import {colors, gameInfo} from "../components/Constant";
 
 const SearchScreen = ({navigation}) => {
 
@@ -20,6 +22,7 @@ const SearchScreen = ({navigation}) => {
         <Navbar onProfilePress={() => navigation.navigate("Profile")} />
   
         <View style={styles.content}>
+          <CardOnline />
         </View>
   
         {/* Floating Action Button */}
@@ -79,7 +82,7 @@ const SearchScreen = ({navigation}) => {
       position: "absolute",
       bottom: 20,
       right: 20,
-      backgroundColor: "#4D2D8F",
+      backgroundColor: colors.COLOR_PRYMARY,
       width: 60,
       height: 60,
       borderRadius: 30,

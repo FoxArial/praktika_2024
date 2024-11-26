@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { getDatabase, ref, set } from 'firebase/database';
+import { createDrawerNavigator } from "@react-navigation/drawer";
 
 import WelcomeScreen from '../screens/WelcomeScreen';
 import LoginScreen from '../screens/LoginScreen';
@@ -11,10 +12,12 @@ import SearchScreen from '../screens/SearchScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import CreateOfflineGame from '../screens/CreateOfflineGame';
 import CreateOnlineGame from '../screens/CreateOnlineGame';
-import { ScreenStack } from 'react-native-screens';
+import SettingsScreen from '../screens/SettingScreen';
+
 
 const db = getDatabase();
 const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
 export default function AppNavigation() {
   return (
   <NavigationContainer>
@@ -28,7 +31,15 @@ export default function AppNavigation() {
     <Stack.Screen name="CreateOnlineGame" options={{headerShown:false}} component={CreateOnlineGame}/>
     <Stack.Screen name="CreateOfflineGame" options={{headerShown:false}} component={CreateOfflineGame}/>
     </Stack.Navigator>
-  </NavigationContainer>
+  </NavigationContainer>,
+
+<NavigationContainer>
+<Drawer.Navigator>
+  <Drawer.Screen name="Home" options={{headerShown: false}} component={HomeScreen}/>
+  <Drawer.Screen name="Profile" options={{headerShown:false}} component={ProfileScreen}/>
+  <Drawer.Screen name="Settings" component={SettingsScreen} />
+</Drawer.Navigator>
+</NavigationContainer>
 
   );
 }
