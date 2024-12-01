@@ -6,7 +6,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import Navbar from "../components/NavbarSearchTop";
 import CardOnline from "../components/CardOnline";
-import {colors, gameInfo} from "../components/Constant";
+import {colors} from "../components/Constant";
 
 const SearchScreen = ({navigation}) => {
 

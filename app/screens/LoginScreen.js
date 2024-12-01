@@ -32,7 +32,6 @@ export default function LoginScreen({ navigation }) {
       </TouchableOpacity>
 
       <Text style={styles.title}>ВХІД</Text>
-      <Text onPress={() => navigation.navigate("Home")}>Mya</Text>
       <View style={styles.inputContainer}>
       {/* Поле для пошти */}
       <TextInput
@@ -68,6 +67,11 @@ export default function LoginScreen({ navigation }) {
         <Text style={styles.loginButtonText}>Увійти</Text>
       </TouchableOpacity>
       {/* Нижній текст */}
+      <Text
+          onPress={() => navigation.navigate("ResetPassword")}
+          style={styles.resetPass}>
+          Забули пароль?
+        </Text>
       <Text style={styles.footerText}>
         Немає акаунту?{" "}
         <Text
@@ -76,6 +80,7 @@ export default function LoginScreen({ navigation }) {
           Зареєструватись.
         </Text>
         </Text>
+        
       {/* Іконки для соціальних мереж */}
       <View style={styles.socialContainer}>
         <View style={styles.iconsContainer}><Icon name="google" size={40} color="#4D2D8F"/></View>        
@@ -147,6 +152,13 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 18,
     fontWeight: "bold",
+  },
+  resetPass: {
+    color: "#4D2D8F",
+    fontSize: 18,
+    fontWeight: "bold",
+    alignSelf: 'center',
+    marginBottom: 10,
   },
   footerText: {
     textAlign: "center",

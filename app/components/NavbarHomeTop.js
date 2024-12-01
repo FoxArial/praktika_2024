@@ -3,7 +3,7 @@ import { View, TouchableOpacity, StyleSheet } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import Icon from "react-native-vector-icons/Feather"; // Для іконок
 
-function NavbarSearchTop() {
+function NavbarHomeTop() {
   const navigation = useNavigation();
 
   return (
@@ -13,10 +13,10 @@ function NavbarSearchTop() {
         <Icon name="menu" size={28} color="#fff" />
       </TouchableOpacity>
 
-      {/* Права частина: Фільтр і Профіль */}
+      {/* Права частина: Пошук і Профіль */}
       <View style={styles.rightIcons}>
-        <TouchableOpacity onPress={() => navigation.navigate("Filter")} style={styles.iconButton}>
-          <Icon name="filter" size={24} color="#fff" />
+        <TouchableOpacity onPress={() => navigation.navigate("Search")} style={styles.iconButton}>
+          <Icon name="search" size={24} color="#fff" />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Profile")} style={styles.iconButton}>
           <Icon name="user" size={24} color="#fff" />
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default NavbarSearchTop;
+export default NavbarHomeTop;
