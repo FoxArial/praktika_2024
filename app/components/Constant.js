@@ -7,6 +7,7 @@ export const colors = {
 // інформація для прикладу карток для онлайн ігр
 export const OnlineCardInfo =  [
     {
+        id: 1,
         userName: 'Ao3', 
         gameName: 'Overwatch2',
         experience: 'Без досвіду',
@@ -14,6 +15,7 @@ export const OnlineCardInfo =  [
         prefTime: '12:00-13:00',
     },
     {
+        id: 2,
         userName: 'JaceMyBL', 
         gameName: 'Overwatch2',
         experience: 'Новачок',
@@ -21,6 +23,7 @@ export const OnlineCardInfo =  [
         prefTime: '---',
     },
     {
+        id: 3,
         userName: 'ArcaneInVain', 
         gameName: 'LeagueOfLegends',
         experience: 'Досвідчений',
@@ -28,6 +31,7 @@ export const OnlineCardInfo =  [
         prefTime: '18:00-21:00',
     },
     {
+        id: 4,
         userName: 'StunkyPunky', 
         gameName: "Valorant",
         experience: 'Без досвіду',
@@ -35,6 +39,7 @@ export const OnlineCardInfo =  [
         prefTime: '10:00-18:00',
     },
     {
+        id: 5,
         userName: 'McCreeNotCassidy', 
         gameName: 'Overwatch2',
         experience: 'Новачок',
@@ -42,6 +47,7 @@ export const OnlineCardInfo =  [
         prefTime: '12:00-15:00',
     },
     {
+        id: 6,
         userName: 'Ariakani', 
         gameName: 'LeagueOfLegends',
         experience: 'Без досвіду',
@@ -49,6 +55,7 @@ export const OnlineCardInfo =  [
         prefTime: '12:00-15:00',
     },
     {
+        id: 7,
         userName: 'Gellynette', 
         gameName: 'Overwatch2',
         experience: 'Досвідчений',
@@ -56,6 +63,7 @@ export const OnlineCardInfo =  [
         prefTime: '18:00-00:00',
     },
     {
+        id: 8,
         userName: "Alice",
         gameName: "Overwatch2",
         experience: "Новачок",
@@ -63,6 +71,7 @@ export const OnlineCardInfo =  [
         prefTime: "18:00-20:00",
     },
     {
+        id: 9,
         userName: "Bob",
         gameName: "Valorant",
         experience: "Досвідчений",
@@ -70,6 +79,7 @@ export const OnlineCardInfo =  [
         prefTime: "20:00-22:00",
     },
     {
+        id: 10,
         userName: 'FutureFF', 
         gameName: 'LeagueOfLegends',
         experience: 'Досвідчений',
@@ -77,6 +87,7 @@ export const OnlineCardInfo =  [
         prefTime: '19:00-21:00',
     },
     {
+        id: 11,
         userName: 'NoScope360', 
         gameName: "Valorant",
         experience: 'Без досвіду',
@@ -86,14 +97,17 @@ export const OnlineCardInfo =  [
 ];
 export const gameInfo = {
     Overwatch2: {
+        id: 1,
         gameName: "Overwatch2",
         gamePhoto: require("../assets/overwatch2.png"), 
       },
       LeagueOfLegends: {
+        id: 2,
         gameName: "LeagueofLegends",
         gamePhoto: require("../assets/league.png"),
       },
       Valorant: {
+        id: 3,
         gameName: "Valorant",
         gamePhoto: require("../assets/valorant.png"),
       },

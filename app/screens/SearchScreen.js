@@ -6,21 +6,35 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import Navbar from "../components/NavbarSearchTop";
 import CardOnline from "../components/CardOnline";
-import {colors} from "../components/Constant";
+import {colors, OnlineCardInfo} from "../components/Constant";
+import Filter from "../components/Filter";
 
 const SearchScreen = ({navigation}) => {
 
+    const [data, setData] = useState(OnlineCardInfo);
     const [isOverlayVisible, setOverlayVisible] = useState(false);
 
     const toggleOverlay = () => {
       setOverlayVisible(!isOverlayVisible);
     };
   
+    const handleSort = (filter) => {
+      const sorted = [...data].sort((a, b) => {
+        if (filter === "gameName") {
+          return a.gameName.localeCompare(b.gameName);
+        } else if (filter === "level") {
+          return a.level - b.level;
+        }
+        return 0;
+      });
+      setData(sorted);
+    };
+
     return (
       <SafeAreaView style={styles.container}>
         {/* Navbar */}
         <Navbar onProfilePress={() => navigation.navigate("Profile")} />
-  
+        <Filter data={data}/>
         <View style={styles.content}>
           <CardOnline />
         </View>

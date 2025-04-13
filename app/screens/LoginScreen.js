@@ -30,7 +30,7 @@ export default function LoginScreen({ navigation }) {
       <TouchableOpacity onPress={() => navigation.navigate("Welcome")} style={styles.backButton}>
         <Icon name="arrow-left" size={35} color="#4D2D8F" />
       </TouchableOpacity>
-
+      <Text onPress={() => navigation.navigate("Home")}>sssef</Text>
       <Text style={styles.title}>ВХІД</Text>
       <View style={styles.inputContainer}>
       {/* Поле для пошти */}
